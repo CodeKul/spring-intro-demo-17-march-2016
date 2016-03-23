@@ -21,4 +21,10 @@ public class AppConfig {
         Car car = new Car();
         return  car;
     }
+    
+    @Bean
+    public Car car(){
+        Car car = new Car();
+        return  car;
+    }
 }

@@ -6,6 +6,7 @@
 package com.codekul.simpleboot.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,8 +16,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class Animal {
     
-    @Autowired
+   // @Autowired // field injection
     private Car carMy;
+
+    public Animal() {
+        
+    }
+    
+    //@Autowired // constructor injection
+    public Animal(Car car) {
+        
+        carMy = car;
+    }
     
     private String name;
     private String country;
@@ -37,5 +48,14 @@ public class Animal {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public Car getCarMy() {
+        return carMy;
+    }
+
+    @Autowired // setter injection
+    public void setCarMy(@Qualifier("car")/* this define to which bean autowire*/ Car abc) {
+        this.carMy = abc;
     }
 }
