@@ -18,24 +18,23 @@ import org.springframework.context.ApplicationContext;
  */
 @SpringBootApplication
 public class Main {
-   
+
     public static void main(String[] args) {
 
         ApplicationContext context = SpringApplication.run(Main.class, args);
-        
-        for(String bean : context.getBeanDefinitionNames()){
-            
-            System.out.println("com.codekul.simpleboot.Main.main() Beans -> "+bean);
+
+        for (String bean : context.getBeanDefinitionNames()) {
+
+            System.out.println("com.codekul.simpleboot.Main.main() Beans -> " + bean);
         }
-        
-         Car car = (Car) context.getBean("carMy");
+
+        Car car = (Car) context.getBean("carMy");
         car.setCarCity("Pune");
-        System.out.println("com.codekul.simpleboot.Main.main() -> animal country ->"+car.getCarCity());
-        
+
         Animal animal = (Animal) context.getBean("animal");
-        animal.setCountry("india");
-        System.out.println("com.codekul.simpleboot.Main.main() -> animal country ->"+animal.getCountry());
+        animal.setCarMy(car);
         
-       
+       animal.setCountry("india");
+        System.out.println("Animal Country - "+animal.getCountry());
     }
 }

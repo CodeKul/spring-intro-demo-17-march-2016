@@ -41,8 +41,6 @@ public class Animal {
     }
 
     public String getCountry() {
-        
-        System.out.println("com.codekul.simpleboot.domain.Animal.getCountry() -> car city = "+carMy.getCarCity());
         return country;
     }
 
