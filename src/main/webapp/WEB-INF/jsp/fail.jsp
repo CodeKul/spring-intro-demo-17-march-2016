@@ -1,6 +1,6 @@
 <%-- 
-    Document   : login
-    Created on : 27 Mar, 2016, 2:42:31 PM
+    Document   : error
+    Created on : 28 Mar, 2016, 2:56:58 PM
     Author     : aniruddha
 --%>
 
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Welcome ${user.userName} </h1>
+        <h1>${user.userName} Not Found ... </h1>
     </body>
 </html>

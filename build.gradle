@@ -37,8 +37,10 @@ repositories {
 
 dependencies {
     
-   compile ("org.springframework.boot:spring-boot-starter")
-   compile ("org.springframework.boot:spring-boot-starter-aop")
-   compile("org.springframework.boot:spring-boot-starter-web")
-   compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    compile ("org.springframework.boot:spring-boot-starter")
+    compile ("org.springframework.boot:spring-boot-starter-aop")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    compile ("org.springframework:spring-jdbc")
+    compile ("mysql:mysql-connector-java")
 }
