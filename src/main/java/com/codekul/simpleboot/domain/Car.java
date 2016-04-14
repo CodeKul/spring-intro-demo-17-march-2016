@@ -14,6 +14,16 @@ public class Car {
     private String carName;
     private String carCity;
 
+    public Car() {
+    }
+
+    
+    public Car(Car car) {
+        this.carCity = car.getCarCity();
+        this.carName = car.getCarName();
+    }
+
+    
     public String getCarName() {
         return carName;
     }
@@ -28,5 +38,10 @@ public class Car {
 
     public void setCarCity(String carCity) {
         this.carCity = carCity;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" + "carName=" + carName + ", carCity=" + carCity + '}';
     }
 }

@@ -8,6 +8,7 @@ package com.codekul.simpleboot.controller;
 import com.codekul.simpleboot.domain.User;
 import com.codekul.simpleboot.service.ServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,7 +43,7 @@ public class ControllerLogin {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
-    public ModelAndView loginPage(@RequestParam String userName, @RequestParam String password) {
+    public ModelAndView loginPage(@RequestParam String userName, @RequestParam String password) throws Exception {
 
         System.out.println("User Name - >" +userName +" Password -> "+password);
         

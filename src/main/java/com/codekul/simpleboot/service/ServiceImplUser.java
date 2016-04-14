@@ -22,7 +22,7 @@ public class ServiceImplUser implements ServiceUser{
     private RepoUser repoUser;
     
     @Override
-    public Boolean login(User user) {
+    public Boolean login(User user) throws Exception{
         
         return  repoUser.login(user);
     }

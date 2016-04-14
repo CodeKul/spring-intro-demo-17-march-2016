@@ -22,7 +22,7 @@ public class RepoImplJdbcUser implements RepoUser{
     private JdbcTemplate jdbcTemplate;
     
     @Override
-    public Boolean login(User user) {
+    public Boolean login(User user) throws Exception{
 
         BeanPropertyRowMapper<User> rowMapper = new BeanPropertyRowMapper<User>();
         

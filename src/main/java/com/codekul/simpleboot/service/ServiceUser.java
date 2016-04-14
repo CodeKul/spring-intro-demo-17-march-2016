@@ -13,5 +13,5 @@ import com.codekul.simpleboot.domain.User;
  */
 public interface ServiceUser {
     
-    Boolean login(User user);
+    Boolean login(User user) throws Exception;
 }
