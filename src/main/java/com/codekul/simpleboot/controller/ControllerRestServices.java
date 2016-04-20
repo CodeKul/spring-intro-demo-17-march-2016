@@ -55,7 +55,7 @@ public class ControllerRestServices {
         try {
 
             serviceUser.login(user);
-
+            
             mapBody.clear();
             mapBody.put("status", "success");
             mapBody.put("msg", "Logged Successfully ..");

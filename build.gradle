@@ -13,7 +13,7 @@ if (!hasProperty('mainClass')) {
 
 buildscript {
     ext {
-        springBootVersion = '1.3.0.M5'
+        springBootVersion = '1.3.3.RELEASE'
     }
     repositories {
         mavenCentral()  

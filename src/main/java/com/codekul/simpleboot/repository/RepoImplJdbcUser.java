@@ -28,8 +28,6 @@ public class RepoImplJdbcUser implements RepoUser{
         
         User userFromDb = jdbcTemplate.queryForObject("select * from codekul_user where username = ? and password = ?", new Object[]{user.getUserName(), user.getPassword()}, rowMapper);
         
-        //return user.getUserName().equals("android") && user.getPassword().equals("android");
-        
         return userFromDb != null;
     }
 }
